@@ -4,12 +4,14 @@ const express = require('express')
 const router = express.Router();
 
 
-
+// mi salvo in una costante l'arrai dei post
+const dataPosts = require('../data/posts');
 
 // index 
 // GET visualizzo tutti gli elementi posts/
 router.get('/', function (req, res) {
-    res.send('Lista dei post');
+    // res.send('Lista dei post');
+    res.json(dataPosts);
 });
 
 // show
