@@ -4,40 +4,49 @@ const express = require('express')
 const router = express.Router();
 
 
-// index
+
+
+// index 
+// GET visualizzo tutti gli elementi posts/
 router.get('/', function (req, res) {
     res.send('Lista dei post');
-    });
+});
 
-    // show
-    router.get('/:id', function (req, res) {
+// show
+// GET visualizzo un unico elemento posts/:id
+router.get('/:id', function (req, res) {
     res.send('Dettagli del post con codice numero ' + req.params.id);
-    });
+});
 
 
-    // store
-    router.post('/', function (req, res) {
+// store
+// POST creo un nuovo elemento posts/
+router.post('/', function (req, res) {
     res.send('Creazione nuovo post');
+    
+});
 
-    });
 
-
-    // update
-    router.put('/:id', function (req, res) {
+// update
+// PUT modifico l'intero elemento posts/:id
+router.put('/:id', function (req, res) {
     res.send('Modifica del post con codice numero ' + req.params.id);
-    });
+});
 
 
-    // modify
-    router.patch('/:id', function (req, res) {
+// modify
+//  PATCH modifico parzialmente l'elemento posts/:id
+router.patch('/:id', function (req, res) {
     res.send('Modifica parziale del post  con codice numero ' + req.params.id);
-    });
+});
 
 
-    // delete
-    router.delete('/:id', function (req, res) {
+// delete
+//  DELETE rimuovo un elemento posts/:id
+router.delete('/:id', function (req, res) {
     res.send('Eliminazione del post  con codice numero ' + req.params.id);
-    });
+});
 
 
-    module.exports = router;
+module.exports = router;
+
